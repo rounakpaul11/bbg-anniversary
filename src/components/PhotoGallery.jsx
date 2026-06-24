@@ -165,9 +165,9 @@ const PhotoGallery = () => {
                 {/* Left navigation arrow */}
                 <button
                   onClick={handlePrev}
-                  className="absolute left-2 md:left-[-5rem] top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-all z-40 hidden md:block cursor-pointer"
+                  className="absolute left-2 md:left-[-5rem] top-1/2 -translate-y-1/2 p-2.5 md:p-3.5 rounded-full bg-black/60 hover:bg-black/80 md:bg-white/10 md:hover:bg-white/20 text-white border border-white/20 transition-all z-40 flex items-center justify-center cursor-pointer shadow-md"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
 
                 <motion.img
@@ -184,9 +184,9 @@ const PhotoGallery = () => {
                 {/* Right navigation arrow */}
                 <button
                   onClick={handleNext}
-                  className="absolute right-2 md:right-[-5rem] top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-all z-40 hidden md:block cursor-pointer"
+                  className="absolute right-2 md:right-[-5rem] top-1/2 -translate-y-1/2 p-2.5 md:p-3.5 rounded-full bg-black/60 hover:bg-black/80 md:bg-white/10 md:hover:bg-white/20 text-white border border-white/20 transition-all z-40 flex items-center justify-center cursor-pointer shadow-md"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
               </div>
 
@@ -204,8 +204,9 @@ const PhotoGallery = () => {
                     {captions[selectedPhotoIndex]}
                   </p>
                 </motion.div>
-                <p className="text-white/40 text-xs mt-3 md:hidden font-inter">Swipe left or right to browse • Tap outside to close</p>
-                <p className="text-white/40 text-xs mt-3 hidden md:block font-inter">Use arrow keys or click arrows to browse • Escape to close</p>
+                <p className="text-rose-300/80 text-xs md:text-sm mt-3.5 font-inter font-medium select-none text-center">
+                  Tap arrows or swipe to browse memories • Tap background to close
+                </p>
               </div>
             </div>
           </motion.div>
