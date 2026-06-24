@@ -97,12 +97,8 @@ const PhotoGallery = () => {
           {photos.map((src, index) => {
             const isProposalPhoto = src === '/13.jpeg';
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`break-inside-avoid relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer ${
                   isProposalPhoto 
                     ? 'border-2 border-rose-400 shadow-rose-300/50 shadow-lg scale-[1.01]' 
@@ -126,13 +122,13 @@ const PhotoGallery = () => {
               
               {/* Desktop Hover Glassmorphism Overlay */}
               <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-lg">
+                <div className="bg-black/75 border border-white/10 rounded-xl p-3 shadow-lg">
                   <p className="text-white font-inter text-xs text-center font-medium drop-shadow-sm">
                     {captions[index]}
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
         </div>
@@ -145,7 +141,7 @@ const PhotoGallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black/90 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black/95 p-4"
             onClick={() => setSelectedPhotoIndex(null)}
           >
             {/* Close button */}
@@ -202,7 +198,7 @@ const PhotoGallery = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 15 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 md:p-6 shadow-xl max-w-lg w-full text-center"
+                  className="bg-neutral-900/90 border border-white/10 rounded-2xl p-4 md:p-6 shadow-xl max-w-lg w-full text-center"
                 >
                   <p className="text-white font-inter text-base md:text-lg font-medium tracking-wide drop-shadow-sm">
                     {captions[selectedPhotoIndex]}

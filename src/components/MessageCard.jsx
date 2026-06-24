@@ -83,11 +83,8 @@ const MessageCard = () => {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, type: "spring" }}
-        className="relative max-w-2xl w-full bg-white/60 backdrop-blur-xl border border-white/80 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col items-center"
+        className="relative max-w-2xl w-full bg-white border border-pink-100 p-8 md:p-12 rounded-3xl shadow-xl flex flex-col items-center"
       >
-        <div className="absolute -top-6 -left-6 w-16 h-16 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-rose-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-
         <div className="relative z-10 flex flex-col items-center w-full">
           <div className="mb-6 flex gap-2">
             <Sparkles className="text-rose-400 w-6 h-6" />
@@ -143,7 +140,7 @@ const MessageCard = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
             onClick={() => {
               setShowVoucher(false);
               setVoucherClaimed(false);
@@ -154,7 +151,7 @@ const MessageCard = () => {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="relative max-w-md w-full bg-gradient-to-br from-neutral-900 to-rose-955 border border-rose-500/30 p-6 md:p-8 rounded-3xl shadow-2xl text-center min-h-[535px] flex flex-col justify-between"
+              className="relative max-w-md w-full bg-gradient-to-br from-neutral-900 to-rose-950 border border-rose-500/30 p-6 md:p-8 rounded-3xl shadow-2xl text-center min-h-[535px] flex flex-col justify-between"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -181,7 +178,7 @@ const MessageCard = () => {
                     ✦ Highly Confidential • For Mou's Eyes Only ✦
                   </p>
 
-                  <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 mb-6 text-left space-y-4 font-inter text-rose-200/90 text-sm md:text-base leading-relaxed select-none">
+                  <div className="bg-neutral-800/80 border border-white/10 rounded-2xl p-5 mb-6 text-left space-y-4 font-inter text-rose-200/90 text-sm md:text-base leading-relaxed select-none">
                     <p className="text-center font-semibold text-rose-400 border-b border-white/5 pb-2">
                       This voucher entitles my bauni bombshell to:
                     </p>

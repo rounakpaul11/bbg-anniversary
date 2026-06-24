@@ -5,11 +5,6 @@ import { Heart } from 'lucide-react';
 const Hero = ({ onOpen }) => {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-pink-100 via-rose-50 to-red-50 py-16 md:py-20">
-      {/* Background soft glow effects */}
-      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-      <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-      <div className="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-rose-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
-
       <motion.div 
         className="z-10 flex flex-col items-center justify-center text-center px-4 max-w-4xl w-full"
         initial={{ opacity: 0, y: 20 }}
